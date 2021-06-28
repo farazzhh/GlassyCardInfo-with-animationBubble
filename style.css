@@ -55,23 +55,23 @@ main {
     animation: bubble 3s infinite linear;
     height: 12rem;
     width: 12rem;
-    top: 50%;
-    right: 6%;
+    top: 340px;
+    right: 50px;
 }
 
 .circle3 {
     height: 7rem;
     width: 7rem;
-    bottom: 6%;
-    left: 13%;
+    bottom: 160px;
+    left: 30px;
 }
 
 .circle4 {
     animation: bubble 4s infinite ease-in-out;
     height: 12rem;
     width: 12rem;
-    bottom: 12%;
-    left: 6%;
+    bottom: 70px;
+    left: 60px;
 }
 
 .profileContainer {
@@ -174,7 +174,7 @@ main {
 }
 
 @media screen and (max-width:768px) {
-    .circle1 {
+    /* .circle1 {
         right: 1%;
     }
     .circle2 {
@@ -188,7 +188,7 @@ main {
     .circle4 {
         left: 1%;
         bottom: 4%;
-    }
+    } */
     .profile {
         text-align: center;
     }
