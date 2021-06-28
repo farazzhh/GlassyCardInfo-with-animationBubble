@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+/* fot using GPU instead CPU in animation */
+.no-cpu {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+}
+
 
 a {
     text-decoration: none;
@@ -35,17 +42,17 @@ main {
     border-radius: 50%;
     position: absolute;
     z-index: 2;
-    box-shadow: 0px 0px 15px 1px rgba(102, 102, 102, 0.233);
 }
 
 .circle1 {
+    top: 44px;
+    right: 38px;
     height: 24rem;
     width: 24rem;
-    top: 5%;
-    right: 2%;
 }
 
 .circle2 {
+    animation: bubble 3s infinite linear;
     height: 12rem;
     width: 12rem;
     top: 50%;
@@ -60,6 +67,7 @@ main {
 }
 
 .circle4 {
+    animation: bubble 4s infinite ease-in-out;
     height: 12rem;
     width: 12rem;
     bottom: 12%;
@@ -97,7 +105,6 @@ main {
 .profile p {
     font-size: 12px;
 }
-
 
 .link {
     margin: 10px;
@@ -140,7 +147,7 @@ main {
     box-shadow: 0px 0px 15px 1px rgba(102, 102, 102, 0.12);
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    width: 95%;
+    width: 90%;
     margin: 5px 0;
     min-width: 400px;
     border-radius: 10px;
@@ -165,7 +172,6 @@ main {
 .cards .card-info p {
     font-size: 14px;
 }
-
 
 @media screen and (max-width:768px) {
     .circle1 {
@@ -205,14 +211,27 @@ main {
     }
     .profileContainer {
         border-radius: 1rem 1rem 0 0;
-
     }
-.profile{
-    flex-direction: row;
-    text-align: left;
-}
+    .profile {
+        flex-direction: row;
+        text-align: left;
+    }
     .contacts_link {
         display: flex;
         flex-direction: row;
+    }
+}
+
+/* Animation */
+
+@keyframes bubble {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(6px, 2px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
     }
 }
